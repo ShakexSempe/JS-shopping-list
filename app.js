@@ -18,8 +18,17 @@ let editID = '';
 
 //end of varaibles
 // ****** EVENT LISTENERS **********
-
 // ****** FUNCTIONS **********
+addItem = (e) => {
+    e.preventDefault();
+    const value = grocery.value;
+    const id = new Date().getTime().toString();
+    console.log(id);
+}
+
+// submit form
+    form.addEventListener('submit', addItem);
+// end of submit form 
 
 // ****** LOCAL STORAGE **********
 
