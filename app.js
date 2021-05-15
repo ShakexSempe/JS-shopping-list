@@ -11,7 +11,12 @@ const clearBtn = document.querySelector('.clear-btn');
 
 
 // edit option
+//varaibles
+let editElement;
+let editFlag = false;
+let editID = '';
 
+//end of varaibles
 // ****** EVENT LISTENERS **********
 
 // ****** FUNCTIONS **********
