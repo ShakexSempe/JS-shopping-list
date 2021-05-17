@@ -23,7 +23,16 @@ addItem = (e) => {
     e.preventDefault();
     const value = grocery.value;
     const id = new Date().getTime().toString();
-    console.log(id);
+    
+    if(value && !editFlag){
+        console.log('add item to the list')
+    }
+    else if(value !=='' && editFlag === true) {
+        console.log('editing');
+    }
+    else{
+        console.log('empty value');
+    }
 }
 
 // submit form
