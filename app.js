@@ -15,10 +15,11 @@ const clearBtn = document.querySelector('.clear-btn');
 let editElement;
 let editFlag = false;
 let editID = '';
+// end of varaibles
 
-//end of varaibles
 // ****** EVENT LISTENERS **********
 // ****** FUNCTIONS **********
+// add items()
 addItem = (e) => {
     e.preventDefault();
     const value = grocery.value;
@@ -31,9 +32,24 @@ addItem = (e) => {
         console.log('editing');
     }
     else{
-        console.log('empty value');
+        displayAlert('please enter value', 'danger');
     }
 }
+// end of add items()
+
+// display alert() when empty string is entered by user
+displayAlert = (text, action) => {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+
+    //remove alert
+    setTimeout(()=>{
+        alert.textContent = '';
+    alert.classList.remove(`alert-${action}`);
+    }, 1500);
+}
+//end of display alert
+
 
 // submit form
     form.addEventListener('submit', addItem);
