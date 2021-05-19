@@ -48,8 +48,11 @@ addItem = (e) => {
             displayAlert('item added to list', 'success');
             //show container 
             container.classList.add('show-container');
-        console.log(element);
-        console.log('add item to the list')
+            
+            //add to local storage
+            addToLocalStorage(id, value);
+            //set back to default
+            setBackToDefault();
     } else if (value !== '' && editFlag === true) {
         console.log('editing');
     } else {
@@ -70,13 +73,17 @@ displayAlert = (text, action) => {
     }, 2000);
 }
 //end of display alert
-
+//set back to default
 
 // submit form
     form.addEventListener('submit', addItem);
 // end of submit form 
-
+setBackToDefault = () => {
+    console.log('set back to default');
+}
 // ****** LOCAL STORAGE **********
-
+addToLocalStorage = (id, value) => {
+    console.log('added to local storage');
+}
 // ****** SETUP ITEMS **********
 
