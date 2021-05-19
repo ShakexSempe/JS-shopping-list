@@ -58,7 +58,7 @@ addItem = (e) => {
 }
 // end of add items()
 
-// display alert() when empty string is entered by user
+// display alert() for whatever value is entered or left empty by user
 displayAlert = (text, action) => {
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
