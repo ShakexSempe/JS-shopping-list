@@ -17,4 +17,7 @@ Vanilla Javascript tutorial project #12 presented by John Smilga
 - Add attribute to the element via setAttributeNode();
 - Template string used to add this created element to the html via innerHTML.
 - Article has already being set so only the contents WiTHIN thr article and not the article itself needs to be added via template string.
+- Add element to the list variable via list.appendChild();
+- displayAlert() text = item added, action = success.
+- show container clas added to the method to add a visibile property to the list which by default is set to visibility:hidden in the css.
 
