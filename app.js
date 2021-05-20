@@ -17,7 +17,7 @@ let editFlag = false;
 let editID = '';
 // end of varaibles
 
-// ****** EVENT LISTENERS **********
+
 // ****** FUNCTIONS **********
 // add items()
 addItem = (e) => {
@@ -65,22 +65,43 @@ addItem = (e) => {
 displayAlert = (text, action) => {
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
+// end of display alert
 
-    //remove alert
-    setTimeout(() => {
-        alert.textContent = '';
-        alert.classList.remove(`alert-${action}`);
-    }, 2000);
+// remove alert
+setTimeout(() => {
+    alert.textContent = '';
+    alert.classList.remove(`alert-${action}`);
+}, 2000);
 }
-//end of display alert
-//set back to default
+// end of remove alert
 
-// submit form
-    form.addEventListener('submit', addItem);
-// end of submit form 
+// clear items
+clearItems = () => {
+    
+}
+// end of clear items
+
+// set back to default
 setBackToDefault = () => {
-    console.log('set back to default');
+    grocery.value = '';
+    editFlag = false;
+    editID = '';
+    submitBtn.textContent= 'submit'
 }
+// end of set back to default
+
+
+
+// ****** end of FUNCTIONS **********
+
+// ****** EVENT LISTENERS **********
+// submit form
+form.addEventListener('submit', addItem);
+// end of submit form 
+//clear items 
+clearBtn.addEventListener('click', clearItems)
+// ****** end of EVENT LISTENERS **********
+
 // ****** LOCAL STORAGE **********
 addToLocalStorage = (id, value) => {
     console.log('added to local storage');

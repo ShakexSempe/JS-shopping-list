@@ -21,3 +21,8 @@ Vanilla Javascript tutorial project #12 presented by John Smilga
 - displayAlert() text = item added, action = success.
 - show container clas added to the method to add a visibile property to the list which by default is set to visibility:hidden in the css.
 
+## functions 
+### setBackToDefault 
+- called multiple times to set back to the initial setup including after each item is added (empty submit area for user text input)
+- clear out value = empty string (added item value removed before user can input new value(item));
+- edit flag set to false etc.. ;
