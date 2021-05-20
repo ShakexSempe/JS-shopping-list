@@ -24,7 +24,7 @@ addItem = (e) => {
     e.preventDefault();
     const value = grocery.value;
     const id = new Date().getTime().toString();
-    
+
     if (value && !editFlag) {
         const element = document.createElement('article');
         // add class to new item for display
@@ -41,18 +41,24 @@ addItem = (e) => {
                 <button type="button" class="delete-btn">
                     <i class="fas fa-trash"></i>
                 </button>
-            </div>`
-            //append child
-            list.appendChild(element);
-            //display alert 
-            displayAlert('item added to list', 'success');
-            //show container 
-            container.classList.add('show-container');
+            </div>`;
+            const deleteBtn = element.querySelector('.delete-btn');
+            const editBtn = element.querySelector('.edit-btn');
+            deleteBtn.addEventListener('click' , deleteItem);
+            editBtn.addEventListener('click', editItem);
             
-            //add to local storage
-            addToLocalStorage(id, value);
-            //set back to default
-            setBackToDefault();
+
+        //append child
+        list.appendChild(element);
+        //display alert 
+        displayAlert('item added to list', 'success');
+        //show container 
+        container.classList.add('show-container');
+
+        //add to local storage
+        addToLocalStorage(id, value);
+        //set back to default
+        setBackToDefault();
     } else if (value !== '' && editFlag === true) {
         console.log('editing');
     } else {
@@ -90,6 +96,17 @@ clearItems = () => {
 }
 // end of clear items
 
+// delete function
+deleteItem = () => {
+    console.log('item-deleted');
+}
+// end of delete function
+// edit function
+editItem = () => {
+    console.log('edit item');
+}
+// end of edit function
+
 // set back to default
 setBackToDefault = () => {
     grocery.value = '';
@@ -108,7 +125,9 @@ setBackToDefault = () => {
 form.addEventListener('submit', addItem);
 // end of submit form 
 //clear items 
-clearBtn.addEventListener('click', clearItems)
+clearBtn.addEventListener('click', clearItems);
+
+
 // ****** end of EVENT LISTENERS **********
 
 // ****** LOCAL STORAGE **********
