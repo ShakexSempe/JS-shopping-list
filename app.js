@@ -77,7 +77,16 @@ setTimeout(() => {
 
 // clear items
 clearItems = () => {
-    
+    const items = document.querySelectorAll('.grocery-item');
+    if(items.length > 0) {
+        items.forEach(item => {
+            list.removeChild(item);
+        });
+    }
+    container.classList.remove('show-container');
+    displayAlert("empty list", "success");
+    setBackToDefault();
+    // localStorage.removeItem('list');
 }
 // end of clear items
 
