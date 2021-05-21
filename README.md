@@ -29,4 +29,8 @@ Vanilla Javascript tutorial project #12 presented by John Smilga
 
 ### clearItems
 - called to clear all grocery items
-- 
+- items variable selects all the items with class name grocery-items. 
+- if(theres more than 0 items in the list) {iterate over those items with a forEach(item){remove child (ie remove Element variable which was dynamicaly created in addItem())}}
+- after if() we hide container by removing .show-container class from container variable classlist.
+- set up alert message that we cleared the list: displayAlert(empty list)
+- setBackToDefault();
