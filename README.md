@@ -42,8 +42,10 @@ Vanilla Javascript tutorial project #12 presented by John Smilga
 - deleteItem and editItem global functions are called in the buttons event listeners (btn.addeventlistener(click, (){}));
 
 
-### delete()
+### deleteItem()
 - event object passed as parameter in order to access the parent container (.grocery-item) through which we can remove a specific item via removeChild() from the already accessible grocery-list element;
 variable element = tagert current event object (the button) -> then the buttons parent element (btn container) -> then the groecery item which is two levels up from current target.
 - remove element varaible from list (list.removeChild());
 - if the items in the list = 0 then we remove the .show-container from container as there are no elements to display. 
+- displayAlert(alert message to show item has been removed);
+- setBackToDefault();
