@@ -35,8 +35,15 @@ Vanilla Javascript tutorial project #12 presented by John Smilga
 - set up alert message that we cleared the list: displayAlert(empty list)
 - setBackToDefault();
 
-### delete and edit buttons 
+## delete and edit buttons 
 - we only have access to the delete and edit button in the addItems() if statement where they are created dynamically. Therefore event listeners must be placed within the addItems(). 
 - attempts to target edit and delete buttons outside the addItems() will fail as the buttons = null outide the function when the app.js initially loads.
 - buttons are targeted using the elements (not document) via element.querySelector();
 - deleteItem and editItem global functions are called in the buttons event listeners (btn.addeventlistener(click, (){}));
+
+
+### delete()
+- event object passed as parameter in order to access the parent container (.grocery-item) through which we can remove a specific item via removeChild() from the already accessible grocery-list element;
+variable element = tagert current event object (the button) -> then the buttons parent element (btn container) -> then the groecery item which is two levels up from current target.
+- remove element varaible from list (list.removeChild());
+- if the items in the list = 0 then we remove the .show-container from container as there are no elements to display. 

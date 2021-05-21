@@ -79,7 +79,7 @@ displayAlert = (text, action) => {
 setTimeout(() => {
     alert.textContent = '';
     alert.classList.remove(`alert-${action}`);
-}, 2000);
+}, 1500);
 }
 // end of remove alert
 
@@ -92,15 +92,23 @@ clearItems = () => {
         });
     }
     container.classList.remove('show-container');
-    displayAlert("empty list", "success");
+    displayAlert("empty list", "danger");
     setBackToDefault();
     // localStorage.removeItem('list');
 }
 // end of clear items
 
 // delete function
-deleteItem = () => {
-    console.log('item-deleted');
+deleteItem = (e) => {
+    const element = e.currentTarget.parentElement.parentElement;
+    list.removeChild(element);
+    if(list.children.length === 0) {
+        container.classList.remove('.show-container');
+    }
+    displayAlert('item removed', "danger");
+    setBackToDefault();
+    //remove from local storage
+    // removeFromLocalStorage(id);
 }
 // end of delete function
 // edit function
