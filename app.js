@@ -42,10 +42,12 @@ addItem = (e) => {
                     <i class="fas fa-trash"></i>
                 </button>
             </div>`;
+            // event listeners for buttons
             const deleteBtn = element.querySelector('.delete-btn');
             const editBtn = element.querySelector('.edit-btn');
             deleteBtn.addEventListener('click' , deleteItem);
             editBtn.addEventListener('click', editItem);
+            // end of event listeners for buttons
             
 
         //append child
