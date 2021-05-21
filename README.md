@@ -49,3 +49,6 @@ variable element = tagert current event object (the button) -> then the buttons 
 - if the items in the list = 0 then we remove the .show-container from container as there are no elements to display. 
 - displayAlert(alert message to show item has been removed);
 - setBackToDefault();
+
+### removeFromLocalStorage
+- 

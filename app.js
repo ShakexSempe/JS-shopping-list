@@ -101,6 +101,7 @@ clearItems = () => {
 // delete function
 deleteItem = (e) => {
     const element = e.currentTarget.parentElement.parentElement;
+    const id = element.dataset.id;
     list.removeChild(element);
     if(list.children.length === 0) {
         container.classList.remove('.show-container');
@@ -143,6 +144,9 @@ clearBtn.addEventListener('click', clearItems);
 // ****** LOCAL STORAGE **********
 addToLocalStorage = (id, value) => {
     console.log('added to local storage');
+}
+removeFromLocalStorage = (id) => {
+    
 }
 // ****** SETUP ITEMS **********
 
