@@ -56,6 +56,10 @@ variable element = tagert current event object (the button) -> then the buttons 
 - apply edit option values to items ( ie. editElement, editID, editID)
 - 1: editElement = button being clicked on, then the parent element of that button(= .btn-container), then the sibling of the btn-container which is the p.title"item". P = the value we want to access. (editElement is the name of the item entered by user)
 -grocery value = the editElement inner html (ie. name of the item);
+- editFlag set to true as we are editing;
+- editID = the elements unique value which is the dataset attribute
+- change the value in the submit button to 'edit';
+
 
 ### removeFromLocalStorage
 - 
