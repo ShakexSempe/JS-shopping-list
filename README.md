@@ -25,7 +25,7 @@ Vanilla Javascript tutorial project #12 presented by John Smilga
 ### setBackToDefault 
 - called multiple times to set back to the initial setup including after each item is added (empty submit area for user text input)
 - clear out value = empty string (added item value removed before user can input new value(item));
-- edit flag set to false etc.. ;
+- edit flag set to false, editID = '', submitBtn.textContent= 'submit' ; {ie. initial values}
 
 ### clearItems
 - called to clear all grocery items
@@ -49,6 +49,13 @@ variable element = tagert current event object (the button) -> then the buttons 
 - if the items in the list = 0 then we remove the .show-container from container as there are no elements to display. 
 - displayAlert(alert message to show item has been removed);
 - setBackToDefault();
+
+### editItem()
+- access grocery item same way as deleteItem(): 
+    with 'element' variable.
+- apply edit option values to items ( ie. editElement, editID, editID)
+- 1: editElement = button being clicked on, then the parent element of that button(= .btn-container), then the sibling of the btn-container which is the p.title"item". P = the value we want to access. (editElement is the name of the item entered by user)
+-grocery value = the editElement inner html (ie. name of the item);
 
 ### removeFromLocalStorage
 - 

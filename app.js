@@ -113,8 +113,15 @@ deleteItem = (e) => {
 }
 // end of delete function
 // edit function
-editItem = () => {
-    console.log('edit item');
+editItem = (e) => {
+    const element = e.currentTarget.parentElement.parentElement;
+    // set edit item
+    editElement = e.currentTarget.parentElement.previousElementSibling;
+    // set form value
+    grocery.value = editElement.innerHTML;
+    editFlag = true;
+    editID = element.dataset.id; 
+    submitBtn.textContent = '..edit';
 }
 // end of edit function
 
