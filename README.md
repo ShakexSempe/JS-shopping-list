@@ -61,7 +61,11 @@ variable element = tagert current event object (the button) -> then the buttons 
 - change the value in the submit button to 'edit';
 
 - handle editItem() when submitting form:
-    
+    2nd condition of addItem if stament = if value is true and edit flag is false. therefore: 
+    -editElement(e.currentTarget... ).innerHTML = value(grocery.value)
+    -displayAlert();
+    -editLocalStorage = editID and the value ;
+    -setBackToDefault();
 
 ### removeFromLocalStorage
 - 
