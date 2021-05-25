@@ -60,6 +60,8 @@ variable element = tagert current event object (the button) -> then the buttons 
 - editID = the elements unique value which is the dataset attribute
 - change the value in the submit button to 'edit';
 
+- handle editItem() when submitting form:
+    
 
 ### removeFromLocalStorage
 - 

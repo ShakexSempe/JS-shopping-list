@@ -62,7 +62,11 @@ addItem = (e) => {
         //set back to default
         setBackToDefault();
     } else if (value !== '' && editFlag === true) {
-        console.log('editing');
+        editElement.innerHTML = value;
+        displayAlert('value changed', 'success');
+        // edit local storage
+        editLocalStorage(editID, value);
+        setBackToDefault();
     } else {
         displayAlert('please enter value', 'danger');
     }
@@ -133,6 +137,12 @@ setBackToDefault = () => {
     submitBtn.textContent= 'submit'
 }
 // end of set back to default
+
+// edit local storage
+editLocalStorage = (id, value) => {
+    
+}
+// end of edit local storage
 
 
 
