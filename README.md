@@ -67,5 +67,13 @@ variable element = tagert current event object (the button) -> then the buttons 
     -editLocalStorage = editID and the value ;
     -setBackToDefault();
 
-### removeFromLocalStorage
-- 
+### LocalStorage
+- #### localStorage API 
+    - methods: setItem; getItem; removeItem; then save values as strings;
+    - setItem : array list converted and stored as strings. JSON.stringify();
+    - getItem : strings parsed in order to display as obects: JSON.parse();
+
+addToLocalStorage() - takes ID and value as params;
+    grocery variable created with the ID and value from the params set as properties of the varibale;
+    - turnary operator: if there is item then assign it to variable else if theres no list then set up as an empty array
+    

@@ -138,11 +138,7 @@ setBackToDefault = () => {
 }
 // end of set back to default
 
-// edit local storage
-editLocalStorage = (id, value) => {
-    
-}
-// end of edit local storage
+
 
 
 
@@ -159,11 +155,29 @@ clearBtn.addEventListener('click', clearItems);
 // ****** end of EVENT LISTENERS **********
 
 // ****** LOCAL STORAGE **********
+// add to local storage
 addToLocalStorage = (id, value) => {
-    console.log('added to local storage');
-}
-removeFromLocalStorage = (id) => {
+    const grocery = {id:id, value:value};
     
+    let items = localStorage.getItem("list") 
+    ? JSON.parse(localStorage.getItem("list")) 
+    :[];
+    console.log(items)
+    items.push(grocery);
+    localStorage.setItem("list",JSON.stringify(items))
+
+    // console.log('added to local storage');
+    // console.log(grocery);
 }
+// edit local storage
+editLocalStorage = (id, value) => {}
+// remove from local storage
+removeFromLocalStorage = (id) => {}
+
+// local storage 
+
+// localStorage.setItem("cars", JSON.stringify(["audi", "bwm", "benz"]));
+// const cars = JSON.parse(localStorage.getItem("cars"));
+// console.log(cars);
 // ****** SETUP ITEMS **********
 
